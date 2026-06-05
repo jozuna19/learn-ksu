@@ -286,7 +286,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   justify-content: space-between;
 }
 
-.code-block pre { margin: 0; background: var(--code-bg) !important; padding: 16px !important; overflow-x: auto; font-size: 14px; line-height: 1.6; }
+.code-block pre { margin: 0; background: var(--code-bg) !important; padding: 16px !important; overflow-x: auto; font-size: 14px; line-height: 1.6; color: #e6edf3; }
 .code-block pre code { font-family: var(--mono) !important; font-size: 14px; background: none; color: inherit; padding: 0; }
 
 .cb-btns { display: flex; gap: 6px; align-items: center; }

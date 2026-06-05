@@ -44,9 +44,9 @@ const courses = [
     modules: [
       {
         id: 'w1',
-        title: 'Week 1 · Java Survival and Recursion',
+        title: 'Week 1 · Recursion & Generics',
         icon: '01',
-        description: 'The Java basics John needs before recursion and Assignment 1.',
+        description: 'Recursion, Generics, Intro to Data Structures. Ch 18-20. Assignment 1.',
         lessons: [
           {
             id: 'cs3305-w1-l1',
@@ -719,7 +719,14 @@ ArrayList<String> safeList = new ArrayList<>(); // Preferred`, 'java', 'Raw vs G
               </div>`
           }
         ]
-      }
+      },
+      { id: 'w2', title: 'Week 2 · Lists & Stacks', icon: '02', description: 'ArrayList, LinkedList, Iterators, Stacks. Ch 20. Assignment 2, Quiz 1 + Exam 1 review.', lessons: [] },
+      { id: 'w3', title: 'Week 3 · Queues & Big-O', icon: '03', description: 'Stacks (N-Queens), Queues, Algorithm Complexity & Big-O. Ch 20, 22. Quiz 1 · Exam 1 · Assignment 3.', lessons: [] },
+      { id: 'w4', title: 'Week 4 · Sorting', icon: '04', description: 'Sorting Algorithms. Ch 23. Quiz 2 + Exam 2 review.', lessons: [] },
+      { id: 'w5', title: 'Week 5 · Trees & BSTs', icon: '05', description: 'Trees, Binary Trees, BSTs. Ch 25. Assignment 4.', lessons: [] },
+      { id: 'w6', title: 'Week 6 · BSTs & Heaps', icon: '06', description: 'Trees, BSTs, Heaps. Ch 25. Quiz 2 · Exam 2 · HW5.', lessons: [] },
+      { id: 'w7', title: 'Week 7 · AVL Trees & Hashing', icon: '07', description: 'AVL Trees, Hashing. Ch 26, 27. Quiz 3.', lessons: [] },
+      { id: 'w8', title: 'Week 8 · Graphs & Final', icon: '08', description: 'Hashing, Graphs & Algorithms, Final review. Ch 27, 28. Final Exam.', lessons: [] }
     ]
   },
   {
@@ -730,13 +737,14 @@ ArrayList<String> safeList = new ArrayList<>(); // Preferred`, 'java', 'Raw vs G
     color: '#3b82f6',
     subtitle: 'Requirements, design, and the discipline of building real software.',
     modules: [
-      {
-        id: 'w1',
-        title: 'Week 1',
-        icon: '01',
-        description: 'Starter module. Add the first SWE lecture here.',
-        lessons: []
-      }
+      { id: 'w1', title: 'Week 1 · Intro & Project Mgmt', icon: '01', description: 'Creating a program, project management. Ch 1, 13. 6/3-6/7.', lessons: [] },
+      { id: 'w2', title: 'Week 2 · Building Systems', icon: '02', description: 'Building a system, complexity, project intro & teams. Ch 2. Q1. 6/8-6/14.', lessons: [] },
+      { id: 'w3', title: 'Week 3 · Process Models', icon: '03', description: 'Engineering software, process models. Ch 3, 4. Test 1 on 6/18. Project plan due 6/21.', lessons: [] },
+      { id: 'w4', title: 'Week 4 · Requirements', icon: '04', description: 'Process models, requirements & user stories. Ch 5, 6. Sprint 1 opens 6/22.', lessons: [] },
+      { id: 'w5', title: 'Week 5 · Design', icon: '05', description: 'Design architecture & methodology, design metrics. Ch 7, 8. Sprint 1 due 7/3.', lessons: [] },
+      { id: 'w6', title: 'Week 6 · Implementation', icon: '06', description: 'Implementation. Ch 9. Test 2 on 7/8. Requirements doc due 7/8. Sprint 2 opens.', lessons: [] },
+      { id: 'w7', title: 'Week 7 · Testing & QA', icon: '07', description: 'Testing & QA, software testing & integration. Ch 10. 7/13-7/20.', lessons: [] },
+      { id: 'w8', title: 'Week 8 · Config & Maintenance', icon: '08', description: 'Configuration management, software support & maintenance. Ch 11, 12. Final Exam 7/27-7/28.', lessons: [] }
     ]
   },
   {
@@ -747,13 +755,14 @@ ArrayList<String> safeList = new ArrayList<>(); // Preferred`, 'java', 'Raw vs G
     color: '#f59e0b',
     subtitle: 'Relational design, SQL, transactions, indexes, normalization.',
     modules: [
-      {
-        id: 'w1',
-        title: 'Week 1',
-        icon: '01',
-        description: 'Starter module. Add the first database lecture here.',
-        lessons: []
-      }
+      { id: 'w1', title: 'Week 1 · Intro to Databases', icon: '01', description: 'Introduction to Databases. Module 1. June 3-6. Quiz 1.', lessons: [] },
+      { id: 'w2', title: 'Week 2 · Modeling Data', icon: '02', description: 'Modeling Data. Module 2. June 8-13. Assignment 1, Quiz 2.', lessons: [] },
+      { id: 'w3', title: 'Week 3 · E-R Model & Relational', icon: '03', description: 'Enhanced E-R Model, Logical DB Design & Relational Model. Modules 3 & 4. Assignment 2.', lessons: [] },
+      { id: 'w4', title: 'Week 4 · SQL', icon: '04', description: 'Introduction to SQL, Advanced SQL. Modules 5 & 6. Assignment 3.', lessons: [] },
+      { id: 'w5', title: 'Week 5 · Midterm Prep', icon: '05', description: 'Test prep. Midterm July 1.', lessons: [] },
+      { id: 'w6', title: 'Week 6 · DB Applications', icon: '06', description: 'Databases in Applications, Physical DB Design & Infrastructure. Modules 7 & 8. Assignment 4.', lessons: [] },
+      { id: 'w7', title: 'Week 7 · Modern Platforms', icon: '07', description: 'Modern Data Platforms, DB Admin & Data Quality. Modules 9 & 10. Assignment 5.', lessons: [] },
+      { id: 'w8', title: 'Week 8 · Object-Oriented Models', icon: '08', description: 'Object-Oriented Models. Module 11. Project Due. Final Test July 28.', lessons: [] }
     ]
   },
   {
@@ -764,13 +773,14 @@ ArrayList<String> safeList = new ArrayList<>(); // Preferred`, 'java', 'Raw vs G
     color: '#8b5cf6',
     subtitle: 'Ethics, communication, and the social impact of computing.',
     modules: [
-      {
-        id: 'w1',
-        title: 'Week 1',
-        icon: '01',
-        description: 'Starter module. Add the first ethics lecture here.',
-        lessons: []
-      }
+      { id: 'w1', title: 'Week 1 · Module 0', icon: '01', description: 'Intro Discussion. June 3-6.', lessons: [] },
+      { id: 'w2', title: 'Week 2 · Module 1', icon: '02', description: 'Module 1. June 8-13. Discussion 1, Assignment 1.', lessons: [] },
+      { id: 'w3', title: 'Week 3 · Modules 2 & 3', icon: '03', description: 'Modules 2 & 3. June 15-20. Discussions 2 & 3, Assignment 2.', lessons: [] },
+      { id: 'w4', title: 'Week 4 · Modules 4 & 5', icon: '04', description: 'Modules 4 & 5. June 22-27. Discussions 4 & 5, Assignment 3.', lessons: [] },
+      { id: 'w5', title: 'Week 5 · Midterm Prep', icon: '05', description: 'Test prep. Midterm Test July 1.', lessons: [] },
+      { id: 'w6', title: 'Week 6 · Module 6', icon: '06', description: 'Module 6. July 6-11. Discussion 6, Team Project.', lessons: [] },
+      { id: 'w7', title: 'Week 7 · Modules 7 & 8', icon: '07', description: 'Modules 7 & 8. July 13-18. Discussions 7 & 8, Assignment 4.', lessons: [] },
+      { id: 'w8', title: 'Week 8 · Module 9', icon: '08', description: 'Module 9. July 20-25. Discussion 9, Assignment 5. Final Exam July 28.', lessons: [] }
     ]
   }
 ];
