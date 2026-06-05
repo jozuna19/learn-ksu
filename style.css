@@ -463,7 +463,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 }
 
 .sql-runner-header .db-badge {
-  background: #e0f2fe;
+  background: #0a1628;
   color: #7dd3fc;
   font-size: 10px;
   padding: 2px 8px;
@@ -523,7 +523,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   cursor: pointer;
   transition: background 0.15s;
 }
-.sql-reset-btn:hover { background: #e2e8ef; }
+.sql-reset-btn:hover { background: #1e2130; }
 
 .sql-hint { font-size: 12px; color: #94a3b8; margin-left: auto; }
 
@@ -536,7 +536,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 .sql-table th { background: #1e3a5f; color: #bae6fd; padding: 8px 12px; text-align: left; font-size: 12px; font-weight: 700; white-space: nowrap; }
 .sql-table td { padding: 7px 12px; border-bottom: 1px solid var(--border); color: #d1d5db; white-space: nowrap; }
 .sql-table tr:nth-child(even) td { background: #161922; }
-.sql-table tr:hover td { background: #eff6ff; }
+.sql-table tr:hover td { background: #1e2130; }
 .sql-table .null { color: #94a3b8; font-style: italic; }
 
 .sql-rowcount { padding: 8px 12px; font-size: 12px; color: #6b7280; font-family: var(--mono); background: #161922; border-top: 1px solid var(--border); }
@@ -558,7 +558,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   white-space: pre-wrap;
 }
 .php-output-header {
-  background: #f1f5f9;
+  background: #161922;
   border: 1px solid var(--border);
   padding: 6px 14px;
   font-size: 11px;
@@ -641,7 +641,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 .lesson-body table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
 .lesson-body th { background: #161922; padding: 10px 12px; text-align: left; font-weight: 700; border: 1px solid var(--border); color: var(--content-text); }
 .lesson-body td { padding: 9px 12px; border: 1px solid var(--border); color: #9ca3af; }
-.lesson-body tr:nth-child(even) td { background: #f9fafb; }
+.lesson-body tr:nth-child(even) td { background: #161922; }
 
 /* ── Auth Box (sidebar bottom) ── */
 .auth-box {
@@ -676,7 +676,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   font-family: inherit;
 }
 
-.auth-signin-btn:hover { background: #f1f5f9; }
+.auth-signin-btn:hover { background: #1e2130; }
 .auth-signin-btn:active { transform: scale(0.98); }
 
 .auth-signin-btn .g-icon {
