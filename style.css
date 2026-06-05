@@ -269,7 +269,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 .lesson-body p { font-size: 15px; color: #9ca3af; line-height: 1.75; margin-bottom: 14px; }
 .lesson-body ul, .lesson-body ol { padding-left: 20px; margin-bottom: 14px; }
 .lesson-body li { font-size: 15px; color: #9ca3af; line-height: 1.75; margin-bottom: 4px; }
-.lesson-body code { font-family: var(--mono); font-size: 13px; background: #f1f5f9; color: #c0392b; padding: 2px 5px; border-radius: 4px; }
+.lesson-body code { font-family: var(--mono); font-size: 13px; background: #2a2d3a; color: #fca5a5; padding: 2px 5px; border-radius: 4px; }
 .lesson-body pre code { background: none; color: inherit; padding: 0; }
 
 /* ── Code blocks ── */
@@ -440,7 +440,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 
 .sql-runner-header .db-badge {
   background: #e0f2fe;
-  color: #0369a1;
+  color: #7dd3fc;
   font-size: 10px;
   padding: 2px 8px;
   border-radius: 99px;
@@ -510,7 +510,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 
 .sql-table { width: 100%; border-collapse: collapse; font-size: 13px; font-family: var(--mono); }
 .sql-table th { background: #1e3a5f; color: #bae6fd; padding: 8px 12px; text-align: left; font-size: 12px; font-weight: 700; white-space: nowrap; }
-.sql-table td { padding: 7px 12px; border-bottom: 1px solid var(--border); color: #1e293b; white-space: nowrap; }
+.sql-table td { padding: 7px 12px; border-bottom: 1px solid var(--border); color: #d1d5db; white-space: nowrap; }
 .sql-table tr:nth-child(even) td { background: #161922; }
 .sql-table tr:hover td { background: #eff6ff; }
 .sql-table .null { color: #94a3b8; font-style: italic; }
@@ -530,7 +530,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   font-family: var(--mono);
   font-size: 13px;
   line-height: 1.6;
-  color: #1e293b;
+  color: #d1d5db;
   white-space: pre-wrap;
 }
 .php-output-header {
@@ -637,7 +637,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 .auth-signin-btn {
   width: 100%;
   background: #1a1d28;
-  color: #1f2937;
+  color: #d1d5db;
   border: none;
   border-radius: 6px;
   padding: 9px 12px;
