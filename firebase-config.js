@@ -16,12 +16,12 @@
 // ════════════════════════════════════════════════════════════════
 
 const firebaseConfig = {
-  apiKey:            "YOUR_API_KEY",
-  authDomain:        "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId:         "YOUR_PROJECT_ID",
-  storageBucket:     "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId:             "YOUR_APP_ID"
+  apiKey:            "AIzaSyBNeE4Yhm0XJCowjHtxqjabQO5AEccXFEs",
+  authDomain:        "learn-ksu.firebaseapp.com",
+  projectId:         "learn-ksu",
+  storageBucket:     "learn-ksu.firebasestorage.app",
+  messagingSenderId: "267354184555",
+  appId:             "1:267354184555:web:caa8cf5835a73f655c0a2e"
 };
 
 const FIREBASE_ENABLED = firebaseConfig.apiKey !== "YOUR_API_KEY";
