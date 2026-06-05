@@ -217,6 +217,30 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 .stat-n { font-size: 28px; font-weight: 800; color: var(--accent-dark); }
 .stat-label { font-size: 13px; color: #6b7280; }
 
+/* ── Course syllabus block (course home page) ── */
+.course-syllabus {
+  max-width: 760px;
+  margin: 0 auto 40px;
+  text-align: left;
+  background: #1a1d28;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+}
+.course-syllabus h2 { margin-top: 24px; }
+.course-syllabus h2:first-child { margin-top: 0; }
+.syll-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  padding-bottom: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+}
+.syll-meta span { font-size: 14px; color: #9ca3af; }
+.syll-meta strong { color: var(--content-text); font-weight: 600; }
+.syll-modules-heading { max-width: 760px; margin: 0 auto 16px; text-align: left; font-size: 20px; font-weight: 700; color: var(--content-text); }
+
 .modules-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
 
 .module-card {

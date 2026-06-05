@@ -41,6 +41,44 @@ const courses = [
     icon: 'DS',
     color: '#10b981',
     subtitle: 'Trees, graphs, hash tables, and the algorithms that make code fast.',
+    syllabus: `
+      <div class="syll-meta">
+        <span><strong>Prof.</strong> Yong Shi</span>
+        <span><strong>Email</strong> yshi5@kennesaw.edu (D2L email only, 48hr reply)</span>
+        <span><strong>Office</strong> J-3220 · (470) 578-6423</span>
+        <span><strong>Section</strong> W02 · CRN 50129 · 3 credits</span>
+      </div>
+
+      <h2>Key Dates & Deadlines</h2>
+      <table>
+        <tr><th>Week</th><th>Due</th><th>Topics</th></tr>
+        <tr><td>1</td><td>Assignment 1 (Recursion)</td><td>Recursion, Generics, Intro to Data Structures (Ch 18-20)</td></tr>
+        <tr><td>2</td><td>Assignment 2 (LinkedList)</td><td>ArrayList, LinkedList, Iterators, Stacks (Ch 20)</td></tr>
+        <tr><td>3</td><td><strong>Quiz 1 · Exam 1</strong> · Assignment 3 (Stack)</td><td>Stacks, Queues, Big-O (Ch 20, 22)</td></tr>
+        <tr><td>4</td><td>Exam 2 review</td><td>Sorting Algorithms (Ch 23)</td></tr>
+        <tr><td>5</td><td>Assignment 4 (Algorithm Analysis)</td><td>Trees, Binary Trees, BSTs (Ch 25)</td></tr>
+        <tr><td>6</td><td><strong>Quiz 2 · Exam 2</strong> · HW5 (Sorting)</td><td>Trees, BSTs, Heaps (Ch 25)</td></tr>
+        <tr><td>7</td><td><strong>Quiz 3</strong></td><td>AVL Trees, Hashing (Ch 26, 27)</td></tr>
+        <tr><td>8</td><td><strong>Final Exam</strong></td><td>Hashing, Graphs, Final review (Ch 27, 28)</td></tr>
+      </table>
+
+      <h2>Grading</h2>
+      <table>
+        <tr><th>Component</th><th>Weight</th></tr>
+        <tr><td>Homework</td><td>30%</td></tr>
+        <tr><td>Final Exam</td><td>25%</td></tr>
+        <tr><td>Midterm 1</td><td>15%</td></tr>
+        <tr><td>Midterm 2</td><td>15%</td></tr>
+        <tr><td>Quizzes</td><td>15%</td></tr>
+      </table>
+      <p>Scale: A 90+ · B 80-89 · C 70-79 · D 60-69 · F under 60.</p>
+
+      <div class="warn"><strong>⚠️ No late submissions.</strong> "No late submission is accepted." Quizzes and exams cannot be made up. Set a calendar reminder for every deadline.</div>
+      <div class="warn"><strong>⚠️ AI prohibited.</strong> Prof. Shi explicitly bans generative AI. Any AI-assisted work is an academic integrity violation. Write your own code.</div>
+
+      <h2>Textbook</h2>
+      <p>Introduction to Java Programming, Comprehensive Version, 10th or 12th Edition by Y. Daniel Liang (Pearson). Either edition works. Used 10th editions run about $15-30.</p>
+    `,
     modules: [
       {
         id: 'w1',
@@ -736,6 +774,48 @@ ArrayList<String> safeList = new ArrayList<>(); // Preferred`, 'java', 'Raw vs G
     icon: 'SE',
     color: '#3b82f6',
     subtitle: 'Requirements, design, and the discipline of building real software.',
+    syllabus: `
+      <div class="syll-meta">
+        <span><strong>Prof.</strong> Richard Gesick</span>
+        <span><strong>Email</strong> rgesick1@kennesaw.edu (12-48hr reply)</span>
+        <span><strong>Office Hours</strong> T/Th 7-9 PM, Virtual (Teams)</span>
+        <span><strong>Section</strong> W02 · CRN 52470 · 3 credits</span>
+      </div>
+
+      <h2>Key Dates & Deadlines</h2>
+      <table>
+        <tr><th>Date</th><th>Due</th></tr>
+        <tr><td>6/7</td><td>Discussion 1 · watch SE day-in-the-life video</td></tr>
+        <tr><td>6/14</td><td>Quiz 1 · Discussion 2 · MS Builds + Chaos Report readings</td></tr>
+        <tr><td><strong>6/18</strong></td><td><strong>Test 1</strong> (Ch 1-4, 13)</td></tr>
+        <tr><td><strong>6/21</strong></td><td><strong>Project plan due</strong></td></tr>
+        <tr><td>6/22</td><td>Sprint 1 opens · Quizzes 3-4 · Discussions 5-6</td></tr>
+        <tr><td><strong>7/3</strong></td><td><strong>Sprint 1 due</strong> (7/4 holiday)</td></tr>
+        <tr><td><strong>7/8</strong></td><td><strong>Test 2</strong> (Ch 5-8) · <strong>Requirements doc due</strong> · Sprint 2 opens 7/6</td></tr>
+        <tr><td>7/9</td><td>Last day to withdraw</td></tr>
+        <tr><td><strong>7/20</strong></td><td><strong>System design doc due · Sprint 2 due</strong></td></tr>
+        <tr><td><strong>7/23</strong></td><td><strong>Presentation + docs due</strong></td></tr>
+        <tr><td><strong>7/27-7/28</strong></td><td><strong>Final Exam</strong> (window: 7/27 8AM to 7/28 6PM)</td></tr>
+      </table>
+
+      <h2>Grading (550 points total)</h2>
+      <table>
+        <tr><th>Component</th><th>Points</th></tr>
+        <tr><td>Test 1 + Test 2 + Final (100 each)</td><td>300</td></tr>
+        <tr><td>Group Project Sprint 1</td><td>50</td></tr>
+        <tr><td>Group Project Sprint 2</td><td>50</td></tr>
+        <tr><td>Group Project Report & Presentation</td><td>50</td></tr>
+        <tr><td>10 Reading Quizzes (5 each)</td><td>50</td></tr>
+        <tr><td>10 Discussions (5 each)</td><td>50</td></tr>
+      </table>
+      <p>Scale: A 90+ · B 80-89 · C 70-79 · D 60-69 · F under 60. Gesick rounds up at .5 (89.6 to A). Project work is required to pass: you cannot earn more than one grade above your project average.</p>
+
+      <div class="warn"><strong>⚠️ Late policy (projects only).</strong> -10% within 12hr, -20% within 24hr, -50% within 48hr, 0% after 48hr. Late discussions and quizzes are NOT accepted at all.</div>
+      <div class="warn"><strong>⚠️ Hard AI ban.</strong> ChatGPT/Claude/Copilot prohibited. Do not even use AI to polish discussion posts.</div>
+
+      <h2>Textbook</h2>
+      <p>Essentials of Software Engineering, 4th or 5th ed by Tsui, Karam, Bernal (Jones & Bartlett). KSU library usually has copies on reserve.</p>
+    `,
     modules: [
       { id: 'w1', title: 'Week 1 · Intro & Project Mgmt', icon: '01', description: 'Creating a program, project management. Ch 1, 13. 6/3-6/7.', lessons: [
           {
@@ -1669,6 +1749,48 @@ ArrayList<String> safeList = new ArrayList<>(); // Preferred`, 'java', 'Raw vs G
     icon: 'DB',
     color: '#f59e0b',
     subtitle: 'Relational design, SQL, transactions, indexes, normalization.',
+    syllabus: `
+      <div class="syll-meta">
+        <span><strong>Prof.</strong> Lavanya Pondichery Sekar</span>
+        <span><strong>Email</strong> lsekar@kennesaw.edu (preferred)</span>
+        <span><strong>Office Hours</strong> T/Th 11AM-1PM by appointment</span>
+        <span><strong>Section</strong> W01 · CRN 52304 · 3 credits</span>
+      </div>
+
+      <div class="note"><strong>📝 Weekly rhythm.</strong> Coursework opens Monday 6 AM. Everything is due Saturday 11:59 PM (6-day window). Expect 14-16 hours/week.</div>
+
+      <h2>Key Dates & Deadlines</h2>
+      <table>
+        <tr><th>Week</th><th>Due (Sat 11:59 PM)</th><th>Topic</th></tr>
+        <tr><td>1 (Jun 3-6)</td><td>Quiz 1</td><td>Introduction to Databases</td></tr>
+        <tr><td>2 (Jun 8-13)</td><td>Assignment 1 · Quiz 2</td><td>Modeling Data</td></tr>
+        <tr><td>3 (Jun 15-20)</td><td>Assignment 2 · Quizzes 3 & 4</td><td>E-R Model · Logical DB Design</td></tr>
+        <tr><td>4 (Jun 22-27)</td><td>Assignment 3 · Quizzes 5 & 6</td><td>Intro to SQL · Advanced SQL</td></tr>
+        <tr><td>5</td><td><strong>Midterm Test (July 1)</strong></td><td>Test prep</td></tr>
+        <tr><td>6 (Jul 6-11)</td><td>Assignment 4 · Quizzes 7 & 8</td><td>DB in Applications · Physical Design</td></tr>
+        <tr><td>7 (Jul 13-18)</td><td>Assignment 5 · Quizzes 9 & 10</td><td>Modern Data Platforms · DB Admin</td></tr>
+        <tr><td>8 (Jul 20-25)</td><td><strong>Project Due</strong> · Quiz 11</td><td>Object-Oriented Models</td></tr>
+        <tr><td>—</td><td><strong>Final Test (July 28)</strong></td><td>—</td></tr>
+      </table>
+
+      <h2>Grading</h2>
+      <table>
+        <tr><th>Component</th><th>Weight</th></tr>
+        <tr><td>5 Assignments (10% each)</td><td>50%</td></tr>
+        <tr><td>1 Project</td><td>15%</td></tr>
+        <tr><td>11 Quizzes (1.65% each)</td><td>15%</td></tr>
+        <tr><td>Midterm Test</td><td>10%</td></tr>
+        <tr><td>Final Exam</td><td>10%</td></tr>
+      </table>
+      <p>Scale: A 90+ · B 80-89 · C 70-79 · D 60-69 · F under 60.</p>
+
+      <div class="warn"><strong>⚠️ Late policy.</strong> 48hr window with 10% penalty, ONLY for assignments and the project (NOT tests or quizzes). Tests have a single-day window in the scheduled week and cannot be retaken.</div>
+      <div class="warn"><strong>⚠️ SSMS is Windows-only.</strong> The course requires Microsoft SQL Server Management Studio. Set up a Windows VM or Docker + Azure Data Studio before 6/3.</div>
+      <div class="warn"><strong>⚠️ AI prohibited.</strong> "Using AI/ChatGPT etc. is strictly not allowed for this course." Do not use it even for polish.</div>
+
+      <h2>Textbook & Tools</h2>
+      <p>Modern Database Management, 14th Edition by Hoffer, Topi, Venkataraman, Bala (recommended, digital OK). Tools: SQL Server Management Studio, draw.io for ER diagrams, web camera for Respondus Monitor proctoring.</p>
+    `,
     modules: [
       { id: 'w1', title: 'Week 1 · Intro to Databases', icon: '01', description: 'Introduction to Databases. Module 1. June 3-6. Quiz 1.', lessons: [] },
       { id: 'w2', title: 'Week 2 · Modeling Data', icon: '02', description: 'Modeling Data. Module 2. June 8-13. Assignment 1, Quiz 2.', lessons: [] },
@@ -1687,6 +1809,46 @@ ArrayList<String> safeList = new ArrayList<>(); // Preferred`, 'java', 'Raw vs G
     icon: 'ET',
     color: '#8b5cf6',
     subtitle: 'Ethics, communication, and the social impact of computing.',
+    syllabus: `
+      <div class="syll-meta">
+        <span><strong>Prof.</strong> Lavanya Pondichery Sekar</span>
+        <span><strong>Email</strong> lsekar@kennesaw.edu (preferred)</span>
+        <span><strong>Office Hours</strong> T/Th 11AM-12PM by appointment</span>
+        <span><strong>Section</strong> W02 · CRN 52307 · 2 credits</span>
+      </div>
+
+      <div class="note"><strong>📝 Weekly rhythm.</strong> Coursework opens Monday 6 AM. Everything is due Saturday 11:59 PM. Team Project is required to pass.</div>
+
+      <h2>Key Dates & Deadlines</h2>
+      <table>
+        <tr><th>Week</th><th>Due (Sat 11:59 PM)</th></tr>
+        <tr><td>1 (Jun 3-6)</td><td>Intro Discussion (Module 0)</td></tr>
+        <tr><td>2 (Jun 8-13)</td><td>Discussion 1 · Assignment 1</td></tr>
+        <tr><td>3 (Jun 15-20)</td><td>Discussions 2 & 3 · Assignment 2</td></tr>
+        <tr><td>4 (Jun 22-27)</td><td>Discussions 4 & 5 · Assignment 3</td></tr>
+        <tr><td>5</td><td><strong>Midterm Test (July 1)</strong></td></tr>
+        <tr><td>6 (Jul 6-11)</td><td>Discussion 6 · <strong>Team Project</strong> · 7/9 last day to withdraw</td></tr>
+        <tr><td>7 (Jul 13-18)</td><td>Discussions 7 & 8 · Assignment 4</td></tr>
+        <tr><td>8 (Jul 20-25)</td><td>Discussion 9 · Assignment 5</td></tr>
+        <tr><td>—</td><td><strong>Final Exam (July 28)</strong></td></tr>
+      </table>
+
+      <h2>Grading</h2>
+      <table>
+        <tr><th>Component</th><th>Weight</th></tr>
+        <tr><td>Midterm (22.5%) + Final (22.5%)</td><td>45%</td></tr>
+        <tr><td>5 Assignments (5% each)</td><td>25%</td></tr>
+        <tr><td>1 Team Project</td><td>15%</td></tr>
+        <tr><td>10 Discussions (1.5% each)</td><td>15%</td></tr>
+      </table>
+      <p>Scale: A 90+ · B 80-89 · C 70-79 · D 60-69 · F under 60. You cannot earn more than one grade above your project average.</p>
+
+      <div class="warn"><strong>⚠️ Late policy.</strong> 48hr window with 10% penalty, ONLY for assignments and the team project (NOT tests or discussions). Tests cannot be retaken.</div>
+      <div class="warn"><strong>⚠️ AI prohibited.</strong> "Using AI/ChatGPT etc. is strictly not allowed." Especially scrutinized in an ethics class. She will examine writing assignments.</div>
+
+      <h2>Textbook</h2>
+      <p>No required textbook. All material is in D2L. Optional free reference: Computers, Information Technology, the Internet, Ethics, Society and Human Values by Philip Pecorino (free online).</p>
+    `,
     modules: [
       { id: 'w1', title: 'Week 1 · Module 0', icon: '01', description: 'Intro Discussion. June 3-6.', lessons: [] },
       { id: 'w2', title: 'Week 2 · Module 1', icon: '02', description: 'Module 1. June 8-13. Discussion 1, Assignment 1.', lessons: [] },

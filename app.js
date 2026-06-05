@@ -236,6 +236,8 @@ function renderCourseHome(el, course) {
       </div>
       ${ctaHtml}
     </div>
+    ${course.syllabus ? `<div class="course-syllabus lesson-body">${course.syllabus}</div>` : ''}
+    <h2 class="syll-modules-heading">Weeks</h2>
     <div class="modules-grid">
       ${course.modules.map(m => {
         const mDone = m.lessons.filter(l => completed.has(l.id)).length;
