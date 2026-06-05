@@ -250,6 +250,195 @@ value: 0  1  1  2  3  5</code></pre>
                   <li>Unlike factorial, Fibonacci branches into two recursive calls.</li>
                 </ul>
               </div>`
+          },
+          {
+            id: 'cs3305-w1-l7',
+            title: 'Official Recursion Deck: The Shape of Recursion',
+            content: `
+              <h2>The Plain-English Idea</h2>
+              <p>Your professor's recursion deck starts with two examples: searching folders inside folders, and drawing H-trees. Both have the same shape: the big problem contains smaller versions of the same problem.</p>
+
+              <div class="note"><strong>Recursive shape:</strong> solve one small piece, then ask the same method to solve a smaller version of the original problem.</div>
+
+              <h2>What Recursion Means</h2>
+              <p>A recursive method is a method that calls itself. That sounds strange at first, but it works when the method has rules that make the problem smaller every time.</p>
+
+              <ul>
+                <li><strong>Base case:</strong> the simplest case where the method stops calling itself.</li>
+                <li><strong>Recursive case:</strong> the case where the method calls itself with a smaller input.</li>
+                <li><strong>Call stack:</strong> Java's stack of unfinished method calls. Each recursive call waits there until its smaller call returns.</li>
+              </ul>
+
+              ${cb(`public static long factorial(int n) {
+    if (n == 0) {
+        return 1;
+    }
+
+    return n * factorial(n - 1);
+}`, 'java', 'Java')}
+
+              <h2>Read This Like English</h2>
+              <p>If <code>n</code> is <code>0</code>, return <code>1</code>. Otherwise, return <code>n</code> times the factorial of the smaller number.</p>
+
+              <pre><code>factorial(4)
+= 4 * factorial(3)
+= 4 * 3 * factorial(2)
+= 4 * 3 * 2 * factorial(1)
+= 4 * 3 * 2 * 1 * factorial(0)
+= 4 * 3 * 2 * 1 * 1
+= 24</code></pre>
+
+              <h2>The Stack Picture</h2>
+              <p>When <code>factorial(4)</code> calls <code>factorial(3)</code>, Java does not forget about the <code>4 *</code> part. It pauses that work on the call stack. Then <code>factorial(3)</code> pauses <code>3 *</code>, and so on, until the base case returns <code>1</code>.</p>
+
+              <div class="key-points">
+                <h4>Key Points</h4>
+                <ul>
+                  <li>Recursion works when a problem contains smaller versions of itself.</li>
+                  <li>Every recursive method needs a base case and a recursive case.</li>
+                  <li>The recursive call must move closer to the base case.</li>
+                  <li>The call stack remembers unfinished work until the base case starts returning values.</li>
+                </ul>
+              </div>`
+          },
+          {
+            id: 'cs3305-w1-l8',
+            title: 'Official Recursion Deck: How to Think Recursively',
+            content: `
+              <h2>The Plain-English Idea</h2>
+              <p>The professor's slides give the main rule for recursive problem solving: break the problem into subproblems. If a subproblem has the same nature as the original problem, solve that smaller problem recursively.</p>
+
+              <div class="tip"><strong>Beginner translation:</strong> ask, "What is the smallest version of this problem?" Then ask, "How do I shrink the current version toward that smallest version?"</div>
+
+              <h2>Example: Print a Message n Times</h2>
+              <p>Printing a message 5 times can be seen as: print it once, then print it 4 more times. That second part is the same problem with a smaller number.</p>
+
+              ${cb(`public static void nPrintln(String message, int n) {
+    if (n >= 1) {
+        System.out.println(message);
+        nPrintln(message, n - 1);
+    }
+    // Base case: n < 1
+}`, 'java', 'Java')}
+
+              <h2>Trace <code>nPrintln("Welcome", 3)</code></h2>
+              <pre><code>n = 3: print Welcome, then call nPrintln("Welcome", 2)
+n = 2: print Welcome, then call nPrintln("Welcome", 1)
+n = 1: print Welcome, then call nPrintln("Welcome", 0)
+n = 0: stop</code></pre>
+
+              <h2>Example: Fibonacci</h2>
+              <p>Fibonacci is different from factorial because it makes two recursive calls. The sequence starts like this:</p>
+
+              <pre><code>index: 0  1  2  3  4  5  6  7
+value: 0  1  1  2  3  5  8  13</code></pre>
+
+              ${cb(`public static int fib(int index) {
+    if (index == 0) {
+        return 0;
+    } else if (index == 1) {
+        return 1;
+    } else {
+        return fib(index - 1) + fib(index - 2);
+    }
+}`, 'java', 'Java')}
+
+              <h2>The Three Recursion Questions</h2>
+              <ul>
+                <li><strong>What are the cases?</strong> Usually one or more base cases, plus a recursive case.</li>
+                <li><strong>What is the smallest case?</strong> For factorial, <code>0!</code>. For Fibonacci, indexes <code>0</code> and <code>1</code>.</li>
+                <li><strong>How does each call shrink?</strong> <code>n - 1</code>, <code>index - 1</code>, <code>index - 2</code>, or moving inward through a string.</li>
+              </ul>
+
+              <div class="key-points">
+                <h4>Key Points</h4>
+                <ul>
+                  <li>Recursive thinking starts by finding a smaller same-shaped problem.</li>
+                  <li>The base case is the version you can answer immediately.</li>
+                  <li>Factorial has one recursive call. Fibonacci has two.</li>
+                  <li>If a recursive call does not shrink the problem, it probably never stops.</li>
+                </ul>
+              </div>`
+          },
+          {
+            id: 'cs3305-w1-l9',
+            title: 'Official Recursion Deck: Classic Recursive Problems',
+            content: `
+              <h2>The Plain-English Idea</h2>
+              <p>The second half of the professor's deck shows where recursion becomes useful: strings, sorting, searching, folders, puzzles, and fractals. You do not need to master all of these immediately. Your goal is to recognize the pattern.</p>
+
+              <h2>Palindrome With a Helper Method</h2>
+              <p>A palindrome reads the same forward and backward. The recursive idea is: compare the outside letters, then move inward.</p>
+
+              ${cb(`public static boolean isPalindrome(String s) {
+    return isPalindrome(s, 0, s.length() - 1);
+}
+
+public static boolean isPalindrome(String s, int low, int high) {
+    if (high <= low) {
+        return true;
+    } else if (s.charAt(low) != s.charAt(high)) {
+        return false;
+    } else {
+        return isPalindrome(s, low + 1, high - 1);
+    }
+}`, 'java', 'Java')}
+
+              <p>The first method is the friendly public method. The second method is the helper. It carries extra information: the left index and the right index.</p>
+
+              <h2>Recursive Selection Sort</h2>
+              <p>Selection sort can be recursive too:</p>
+              <ol>
+                <li>Find the smallest value in the current part of the list.</li>
+                <li>Swap it into the first position of that part.</li>
+                <li>Recursively sort the rest of the list.</li>
+              </ol>
+
+              <h2>Recursive Binary Search</h2>
+              <p>Binary search is a natural recursive algorithm because every step throws away half of the search space.</p>
+
+              ${cb(`public static int binarySearch(int[] list, int key, int low, int high) {
+    if (low > high) {
+        return -1;
+    }
+
+    int mid = (low + high) / 2;
+
+    if (key < list[mid]) {
+        return binarySearch(list, key, low, mid - 1);
+    } else if (key == list[mid]) {
+        return mid;
+    } else {
+        return binarySearch(list, key, mid + 1, high);
+    }
+}`, 'java', 'Java')}
+
+              <h2>Directory Size and Tower of Hanoi</h2>
+              <p>Directories are recursive because a folder can contain files and more folders. Tower of Hanoi is recursive because moving <code>n</code> disks depends on first moving <code>n - 1</code> disks.</p>
+
+              <pre><code>Tower of Hanoi idea:
+1. Move n - 1 disks from A to C using B.
+2. Move disk n from A to B.
+3. Move n - 1 disks from C to B using A.</code></pre>
+
+              <h2>Recursion vs Iteration</h2>
+              <p>Iteration repeats with loops. Recursion repeats by calling a method again. Recursion can be cleaner for naturally recursive problems, but it has overhead because every call uses stack space.</p>
+
+              <div class="warn"><strong>Exam warning:</strong> Recursion is elegant, but not automatically faster. Sometimes a loop is simpler and uses less memory.</div>
+
+              <h2>Tail Recursion</h2>
+              <p>A method is tail recursive when the recursive call is the final action. There is no unfinished multiplication, addition, or other work waiting after the call returns.</p>
+
+              <div class="key-points">
+                <h4>Key Points</h4>
+                <ul>
+                  <li>Helper methods let recursion carry extra state like indexes.</li>
+                  <li>Binary search shrinks the problem by half each recursive call.</li>
+                  <li>Directory traversal and Tower of Hanoi are naturally recursive problems.</li>
+                  <li>Recursion trades simpler structure for call-stack overhead.</li>
+                  <li>Tail recursion means the recursive call is the last action in the method.</li>
+                </ul>
+              </div>`
           }
         ]
       }
