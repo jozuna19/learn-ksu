@@ -575,12 +575,17 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   margin: 16px 0;
   font-size: 14px;
   line-height: 1.65;
+  color: #e5e7eb;
 }
 .tip { background: var(--tip-bg); border-left: 4px solid var(--tip-border); }
 .warn { background: var(--warn-bg); border-left: 4px solid var(--warn-border); }
 .note { background: var(--note-bg); border-left: 4px solid var(--note-border); }
 .info { background: var(--info-bg); border-left: 4px solid var(--info-border); }
 .tip strong, .warn strong, .note strong, .info strong { display: block; margin-bottom: 4px; }
+.tip strong { color: #fcd34d; }
+.warn strong { color: #fca5a5; }
+.note strong { color: #86efac; }
+.info strong { color: #93c5fd; }
 
 /* ── Key points ── */
 .key-points {
