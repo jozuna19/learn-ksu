@@ -737,7 +737,155 @@ ArrayList<String> safeList = new ArrayList<>(); // Preferred`, 'java', 'Raw vs G
     color: '#3b82f6',
     subtitle: 'Requirements, design, and the discipline of building real software.',
     modules: [
-      { id: 'w1', title: 'Week 1 · Intro & Project Mgmt', icon: '01', description: 'Creating a program, project management. Ch 1, 13. 6/3-6/7.', lessons: [] },
+      { id: 'w1', title: 'Week 1 · Intro & Project Mgmt', icon: '01', description: 'Creating a program, project management. Ch 1, 13. 6/3-6/7.', lessons: [
+          {
+            id: 'swe3313-w1-l1',
+            title: 'Creating a Program',
+            content: `
+              <h2>The Simple Set of Steps</h2>
+              <p>Software development looks simple on paper: four steps, done. In practice each step hides a lot of work.</p>
+              <ol>
+                <li><strong>Understand the problem (requirements):</strong> What does the software need to do? What are the inputs, outputs, performance constraints, and security needs?</li>
+                <li><strong>Design:</strong> Organize the functionalities. Think about input/output formats, constraints like speed and UI, and the algorithm. Design may continue into the coding phase.</li>
+                <li><strong>Code/Implement:</strong> Convert the design into actual code. This includes building the UI or I/O format, sequencing the processing correctly, converting the algorithm to the target language, and using library APIs properly.</li>
+                <li><strong>Verify/Test:</strong> Confirm the program actually works. This runs throughout development, not just at the end.</li>
+              </ol>
+
+              <h2>What Really Happens</h2>
+              <p>The "imagined" ideal situation rarely matches the actual situation.</p>
+              <ul>
+                <li>Programs rarely work on the first, second, or even fifth try.</li>
+                <li>Re-reading the requirements reveals gaps or misunderstandings.</li>
+                <li>Tracing and debugging take more time than expected.</li>
+                <li>At some point you declare it "good enough" and ship.</li>
+              </ul>
+              <div class="note"><strong>📝 Note</strong> This gap between imagined and actual is normal. Software engineering exists to manage it.</div>
+
+              <h2>What Matters Beyond "Code is Done"</h2>
+              <p>Four questions define quality beyond whether the code runs:</p>
+              <ul>
+                <li><strong>Elapsed time:</strong> How long in calendar time did it take?</li>
+                <li><strong>Effort:</strong> How many total person-hours were spent?</li>
+                <li><strong>Completeness:</strong> Does the solution solve the complete problem?</li>
+                <li><strong>Quality:</strong> How good is the code, design, documentation, and testing?</li>
+              </ul>
+
+              <h2>A Concrete Example: The Sorting Program</h2>
+              <p>The professor uses a real exercise: write a program that reads lines from a file, sorts them alphabetically, and writes them to another file with a simple GUI.</p>
+              <p>Before starting, students estimate in three rounds:</p>
+              <ol>
+                <li><strong>Ideal time:</strong> How long if you could work with zero interruptions?</li>
+                <li><strong>Calendar time:</strong> When would you realistically finish, including breaks, sleep, and other obligations?</li>
+                <li><strong>Subtask breakdown:</strong> Divide the work. For example: a class <code>StringSorter</code> with methods Read, Write, Sort, plus an <code>IndexOfBiggest</code> helper.</li>
+              </ol>
+              <p>Past class results: estimates of 10 to 15 minutes were common. Actual elapsed time ranged from 46 minutes to 5 days. Effort ranged from 40 person-minutes to 8 person-hours. The gap between estimate and reality is the lesson.</p>
+
+              <h2>Testing Happens Throughout</h2>
+              <p>Testing is not a final step. It runs across the whole process:</p>
+              <ul>
+                <li><strong>When:</strong> While the program is being defined, while it is developed, and after it is complete.</li>
+                <li><strong>Types:</strong> Acceptance/validation, verification, unit testing.</li>
+                <li><strong>Methods:</strong> Black-box (test behavior without seeing code) and white-box (test internal logic).</li>
+              </ul>
+
+              <div class="key-points">
+                <h4>Key Points</h4>
+                <ul>
+                  <li>The four steps are: understand requirements, design, code, test. Each is harder than it looks.</li>
+                  <li>The gap between your time estimate and actual time is normal and expected.</li>
+                  <li>Quality = elapsed time + effort + completeness + code/design/doc/test quality combined.</li>
+                  <li>Testing runs throughout development, not just at the end.</li>
+                  <li>Breaking work into subtasks gives more accurate estimates than guessing the total.</li>
+                </ul>
+              </div>`
+          },
+          {
+            id: 'swe3313-w1-l2',
+            title: 'Software Project Management (POMA)',
+            content: `
+              <h2>Why Projects Need Management</h2>
+              <p>A software development process tells you how to build software. A software project management process tells you how to plan, track, and control that work. They are not the same thing.</p>
+              <p>Every project, small or large, needs <strong>POMA</strong>: Planning, Organizing, Monitoring, Adjusting. POMA looks sequential at the macro level but is highly iterative at the micro level.</p>
+
+              <h2>Planning</h2>
+              <p>Planning starts with understanding requirements, then covers four areas:</p>
+              <ul>
+                <li>Estimate work effort, schedule, and needed resources.</li>
+                <li>Define and establish measurable goals.</li>
+                <li>Determine resource allocations: people, process, tools, facilities.</li>
+                <li>Identify and analyze project risks.</li>
+              </ul>
+              <p><strong>General effort estimation formula:</strong></p>
+              <p><code>Units of effort = a + b(size)^c + sum(factors)</code></p>
+              <p>Where a, b, c are estimated constants, size is the estimated project size, and factors are additional concerns. COCOMO I, COCOMO II, and Function Point models all use variations of this formula.</p>
+
+              <h2>Work Breakdown Structure (WBS)</h2>
+              <p>WBS is the core planning tool. Steps:</p>
+              <ol>
+                <li>Identify the external deliverables.</li>
+                <li>Identify tasks required to produce each deliverable (including intermediate ones).</li>
+                <li>Sequence the tasks and find opportunities for parallelism.</li>
+                <li>Estimate the size of each task.</li>
+                <li>Estimate the productivity of the people assigned to each task.</li>
+                <li>Calculate time required for each task.</li>
+                <li>Lay out the timeline and label resources (Gantt chart).</li>
+              </ol>
+              <p>The output of WBS is your initial schedule estimate.</p>
+
+              <h2>Organizing</h2>
+              <p>Once a plan exists, organizing begins:</p>
+              <ul>
+                <li>Design the organization structure.</li>
+                <li>Hire and acquire resources.</li>
+                <li>Complete required education and training.</li>
+                <li>Establish tracking mechanisms for risks and goals (schedule, cost, market).</li>
+              </ul>
+
+              <h2>Monitoring: Earned Value</h2>
+              <p>Earned value tracks how much work is actually done. Key terms:</p>
+              <ul>
+                <li><strong>BCW:</strong> Budgeted Cost of Work. Estimated effort for one task.</li>
+                <li><strong>BCWS:</strong> Sum of estimated effort for all tasks planned to be done by a specific date.</li>
+                <li><strong>BAC:</strong> Budget at Completion. Total estimated project effort (sum of all BCWs).</li>
+                <li><strong>BCWP:</strong> Sum of estimated effort of tasks actually completed by a specific date.</li>
+                <li><strong>ACWP:</strong> Sum of actual effort spent on completed tasks.</li>
+                <li><strong>EV (Earned Value) = BCWP / BAC</strong></li>
+              </ul>
+              <p><strong>Example:</strong> BAC = 115 person-days. On the check date: BCWP = 50, ACWP = 55, BCWS = 25.</p>
+              <ul>
+                <li>EV = 50 / 115 = 43% complete</li>
+                <li>Cost Variance = BCWP - ACWP = 50 - 55 = -5 (over budget by 5 days)</li>
+                <li>Schedule Variance = BCWP - BCWS = 50 - 25 = +25 (ahead of schedule)</li>
+              </ul>
+
+              <h2>Adjusting</h2>
+              <p>When monitoring shows a problem, act. Three areas of adjustment:</p>
+              <ul>
+                <li><strong>Resources:</strong> Add people, swap assignments, change tools.</li>
+                <li><strong>Schedule:</strong> Extend deadlines, reprioritize milestones.</li>
+                <li><strong>Project content:</strong> Reduce scope, drop features, simplify requirements.</li>
+              </ul>
+
+              <h2>Goals of Software Project Management</h2>
+              <ul>
+                <li>End results satisfy the customer's needs.</li>
+                <li>All product attributes (quality, security, productivity, cost, schedule) are met.</li>
+                <li>Team members are operating effectively and at high morale.</li>
+                <li>Required tools and resources are available and effectively used.</li>
+              </ul>
+
+              <div class="key-points">
+                <h4>Key Points</h4>
+                <ul>
+                  <li>POMA = Planning, Organizing, Monitoring, Adjusting. Every project needs all four.</li>
+                  <li>WBS breaks a project into deliverables and tasks, estimates each, and sequences them into a schedule.</li>
+                  <li>Earned Value = BCWP / BAC. Tells you the actual percent complete on a given date.</li>
+                  <li>Cost Variance = BCWP - ACWP (negative = over budget). Schedule Variance = BCWP - BCWS (positive = ahead of schedule).</li>
+                  <li>When monitoring shows a problem, adjust resources, schedule, or scope. Ignoring it is not an option.</li>
+                </ul>
+              </div>`
+          }
+        ] },
       { id: 'w2', title: 'Week 2 · Building Systems', icon: '02', description: 'Building a system, complexity, project intro & teams. Ch 2. Q1. 6/8-6/14.', lessons: [] },
       { id: 'w3', title: 'Week 3 · Process Models', icon: '03', description: 'Engineering software, process models. Ch 3, 4. Test 1 on 6/18. Project plan due 6/21.', lessons: [] },
       { id: 'w4', title: 'Week 4 · Requirements', icon: '04', description: 'Process models, requirements & user stories. Ch 5, 6. Sprint 1 opens 6/22.', lessons: [] },
