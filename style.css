@@ -11,17 +11,17 @@
   --accent-dark: #d97706;
   --run-btn: #f59e0b;
   --run-btn-text: #1a1a2e;
-  --content-bg: #fafafa;
-  --content-text: #1e293b;
-  --border: #e2e8ef;
+  --content-bg: #0f1117;
+  --content-text: #d1d5db;
+  --border: #2a2d3a;
   --code-bg: #0d1117;
-  --tip-bg: #fef3c7;
+  --tip-bg: #2a2100;
   --tip-border: #f59e0b;
-  --warn-bg: #fef2f2;
+  --warn-bg: #2a0a0a;
   --warn-border: #ef4444;
-  --note-bg: #f0fdf4;
+  --note-bg: #0a2a14;
   --note-border: #22c55e;
-  --info-bg: #eff6ff;
+  --info-bg: #0a1628;
   --info-border: #3b82f6;
   --radius: 8px;
   --mono: 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
@@ -151,14 +151,14 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 #main { flex: 1; overflow-y: auto; background: var(--content-bg); }
 #main::-webkit-scrollbar { width: 6px; }
 #main::-webkit-scrollbar-track { background: transparent; }
-#main::-webkit-scrollbar-thumb { background: #d0d7de; border-radius: 4px; }
+#main::-webkit-scrollbar-thumb { background: #3d3d5c; border-radius: 4px; }
 
 #lesson { max-width: 860px; margin: 0 auto; padding: 48px 40px 80px; }
 
 /* ── Home ── */
 .home-hero { text-align: center; padding: 48px 0 40px; }
 .home-hero h1 { font-size: 40px; font-weight: 800; color: var(--content-text); margin-bottom: 12px; }
-.home-hero p { font-size: 18px; color: #64748b; margin-bottom: 32px; }
+.home-hero p { font-size: 18px; color: #6b7280; margin-bottom: 32px; }
 
 .stack-badges {
   display: flex;
@@ -206,7 +206,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   font-weight: 700;
   color: #16a34a;
   padding: 16px 32px;
-  background: #f0fdf4;
+  background: #0a2a14;
   border: 2px solid #22c55e;
   border-radius: var(--radius);
   display: inline-block;
@@ -215,12 +215,12 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 .home-stats { display: flex; justify-content: center; gap: 32px; margin-bottom: 32px; }
 .stat { text-align: center; }
 .stat-n { font-size: 28px; font-weight: 800; color: var(--accent-dark); }
-.stat-label { font-size: 13px; color: #64748b; }
+.stat-label { font-size: 13px; color: #6b7280; }
 
 .modules-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
 
 .module-card {
-  background: #fff;
+  background: #1a1d28;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 18px;
@@ -240,7 +240,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 .module-card .card-icon { font-size: 24px; margin-bottom: 10px; }
 .module-card .card-code { font-size: 11px; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px; }
 .module-card h3 { font-size: 15px; font-weight: 700; color: var(--content-text); margin-bottom: 4px; }
-.module-card p { font-size: 13px; color: #64748b; }
+.module-card p { font-size: 13px; color: #6b7280; }
 .module-card .card-count { margin-top: 10px; font-size: 12px; color: var(--sidebar-muted); }
 
 .empty-state {
@@ -248,27 +248,27 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   text-align: center;
   font-size: 14px;
   color: var(--sidebar-muted);
-  background: #fff;
+  background: #1a1d28;
   border: 1px dashed var(--border);
   border-radius: var(--radius);
   margin: 16px auto;
   max-width: 480px;
 }
 
-.lesson-breadcrumb a { cursor: pointer; color: #57606a; text-decoration: none; }
+.lesson-breadcrumb a { cursor: pointer; color: #9ca3af; text-decoration: none; }
 .lesson-breadcrumb a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 /* ── Lesson ── */
 .lesson-header { margin-bottom: 32px; }
-.lesson-breadcrumb { font-size: 12px; color: #64748b; margin-bottom: 8px; }
+.lesson-breadcrumb { font-size: 12px; color: #6b7280; margin-bottom: 8px; }
 .lesson-breadcrumb span { color: var(--accent-dark); font-weight: 600; }
 .lesson-header h1 { font-size: 32px; font-weight: 800; color: var(--content-text); line-height: 1.2; }
 
 .lesson-body h2 { font-size: 20px; font-weight: 700; color: var(--content-text); margin: 32px 0 12px; padding-bottom: 6px; border-bottom: 2px solid var(--border); }
 .lesson-body h3 { font-size: 16px; font-weight: 700; color: var(--content-text); margin: 24px 0 8px; }
-.lesson-body p { font-size: 15px; color: #475569; line-height: 1.75; margin-bottom: 14px; }
+.lesson-body p { font-size: 15px; color: #9ca3af; line-height: 1.75; margin-bottom: 14px; }
 .lesson-body ul, .lesson-body ol { padding-left: 20px; margin-bottom: 14px; }
-.lesson-body li { font-size: 15px; color: #475569; line-height: 1.75; margin-bottom: 4px; }
+.lesson-body li { font-size: 15px; color: #9ca3af; line-height: 1.75; margin-bottom: 4px; }
 .lesson-body code { font-family: var(--mono); font-size: 13px; background: #f1f5f9; color: #c0392b; padding: 2px 5px; border-radius: 4px; }
 .lesson-body pre code { background: none; color: inherit; padding: 0; }
 
@@ -423,14 +423,14 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  background: #fff;
+  background: #1a1d28;
 }
 
 .sql-runner-header {
-  background: #f8fafc;
+  background: #161922;
   padding: 10px 14px;
   font-size: 12px;
-  color: #475569;
+  color: #9ca3af;
   font-weight: 700;
   border-bottom: 1px solid var(--border);
   display: flex;
@@ -457,7 +457,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   resize: vertical;
   min-height: 80px;
   max-height: 300px;
-  background: #f8fafc;
+  background: #161922;
   color: var(--content-text);
   line-height: 1.6;
   tab-size: 2;
@@ -465,7 +465,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 
 .sql-runner-footer {
   padding: 8px 14px;
-  background: #f8fafc;
+  background: #161922;
   border-top: 1px solid var(--border);
   display: flex;
   align-items: center;
@@ -495,7 +495,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   border-radius: 6px;
   padding: 7px 14px;
   font-size: 13px;
-  color: #64748b;
+  color: #6b7280;
   cursor: pointer;
   transition: background 0.15s;
 }
@@ -511,19 +511,19 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 .sql-table { width: 100%; border-collapse: collapse; font-size: 13px; font-family: var(--mono); }
 .sql-table th { background: #1e3a5f; color: #bae6fd; padding: 8px 12px; text-align: left; font-size: 12px; font-weight: 700; white-space: nowrap; }
 .sql-table td { padding: 7px 12px; border-bottom: 1px solid var(--border); color: #1e293b; white-space: nowrap; }
-.sql-table tr:nth-child(even) td { background: #f8fafc; }
+.sql-table tr:nth-child(even) td { background: #161922; }
 .sql-table tr:hover td { background: #eff6ff; }
 .sql-table .null { color: #94a3b8; font-style: italic; }
 
-.sql-rowcount { padding: 8px 12px; font-size: 12px; color: #64748b; font-family: var(--mono); background: #f8fafc; border-top: 1px solid var(--border); }
+.sql-rowcount { padding: 8px 12px; font-size: 12px; color: #6b7280; font-family: var(--mono); background: #161922; border-top: 1px solid var(--border); }
 .sql-message { padding: 12px; font-size: 13px; color: #16a34a; font-family: var(--mono); }
 .sql-error { padding: 12px; font-size: 13px; color: #dc2626; font-family: var(--mono); white-space: pre-wrap; }
-.sql-loading { padding: 12px; font-size: 13px; color: #64748b; font-family: var(--mono); }
+.sql-loading { padding: 12px; font-size: 13px; color: #6b7280; font-family: var(--mono); }
 
 /* ── PHP output box ── */
 .php-block { margin: 16px 0; }
 .php-output {
-  background: #f8fafc;
+  background: #161922;
   border: 1px solid var(--border);
   border-top: none;
   padding: 12px 16px;
@@ -538,7 +538,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   border: 1px solid var(--border);
   padding: 6px 14px;
   font-size: 11px;
-  color: #64748b;
+  color: #6b7280;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -560,7 +560,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 
 /* ── Key points ── */
 .key-points {
-  background: #fff;
+  background: #1a1d28;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px 20px;
@@ -568,7 +568,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 }
 .key-points h4 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--sidebar-muted); margin-bottom: 10px; }
 .key-points ul { padding-left: 16px; }
-.key-points li { font-size: 14px; color: #475569; line-height: 1.7; }
+.key-points li { font-size: 14px; color: #9ca3af; line-height: 1.7; }
 
 /* ── Nav ── */
 .lesson-nav {
@@ -581,7 +581,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 }
 
 .nav-btn {
-  background: #fff;
+  background: #1a1d28;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 10px 20px;
@@ -594,13 +594,13 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   align-items: center;
   gap: 6px;
 }
-.nav-btn:hover { background: #f8fafc; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.nav-btn:hover { background: #161922; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
 .nav-btn.primary { background: var(--accent); color: var(--run-btn-text); border-color: var(--accent); }
 .nav-btn.primary:hover { background: var(--accent-dark); color: #fff; }
 .nav-btn:disabled { opacity: 0.35; cursor: default; box-shadow: none; }
 
 .complete-btn {
-  background: #fff;
+  background: #1a1d28;
   border: 2px solid var(--accent);
   border-radius: var(--radius);
   padding: 10px 20px;
@@ -615,8 +615,8 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 
 /* ── Table ── */
 .lesson-body table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 16px 0; }
-.lesson-body th { background: #f8fafc; padding: 10px 12px; text-align: left; font-weight: 700; border: 1px solid var(--border); color: var(--content-text); }
-.lesson-body td { padding: 9px 12px; border: 1px solid var(--border); color: #475569; }
+.lesson-body th { background: #161922; padding: 10px 12px; text-align: left; font-weight: 700; border: 1px solid var(--border); color: var(--content-text); }
+.lesson-body td { padding: 9px 12px; border: 1px solid var(--border); color: #9ca3af; }
 .lesson-body tr:nth-child(even) td { background: #f9fafb; }
 
 /* ── Auth Box (sidebar bottom) ── */
@@ -636,7 +636,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
 
 .auth-signin-btn {
   width: 100%;
-  background: #fff;
+  background: #1a1d28;
   color: #1f2937;
   border: none;
   border-radius: 6px;
@@ -667,7 +667,7 @@ html, body { height: 100%; font-family: -apple-system, BlinkMacSystemFont, 'Sego
   content: '';
   position: absolute;
   inset: 3px;
-  background: #fff;
+  background: #1a1d28;
   border-radius: 50%;
 }
 
