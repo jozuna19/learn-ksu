@@ -439,6 +439,350 @@ public static boolean isPalindrome(String s, int low, int high) {
                   <li>Tail recursion means the recursive call is the last action in the method.</li>
                 </ul>
               </div>`
+          },
+          {
+            id: 'cs3305-w1-l10',
+            title: 'Video Notes: CS3305 Survival Checklist',
+            content: `
+              <h2>The Plain-English Idea</h2>
+              <p>The course overview and homework-guidance videos are not really about data structures. They are about not losing easy points. Treat this lesson like your pre-flight checklist before every CS3305 submission.</p>
+
+              <h2>Daily Course Habits</h2>
+              <ul>
+                <li>Check D2L announcements regularly.</li>
+                <li>Check D2L email daily.</li>
+                <li>Use D2L email for course communication.</li>
+                <li>Put the course number and section in the email subject line.</li>
+              </ul>
+
+              <h2>Academic Integrity Rules</h2>
+              <p>The professor was direct here: do not copy code from classmates, older students, websites, or other resources. Submissions with identical or slightly modified code may be treated as plagiarism.</p>
+
+              <div class="warn"><strong>Important:</strong> If you discuss ideas with someone or use any outside resource, document and cite that resource in the submission as required by the course.</div>
+
+              <h2>Assignment Submission Rules</h2>
+              <ul>
+                <li>Submit to the D2L submission folder, not by email.</li>
+                <li>No late submissions are accepted.</li>
+                <li>You may resubmit before the deadline. The latest submission before the deadline is graded.</li>
+                <li>Do not submit a zip file unless an assignment explicitly says to.</li>
+                <li>Submit individual <code>.java</code> files plus one results document with screenshots.</li>
+                <li>Compile and run your files immediately before upload.</li>
+              </ul>
+
+              <h2>Required Java File Hygiene</h2>
+              <ul>
+                <li>Use the exact class/file names requested in the assignment.</li>
+                <li>Include an author header at the top of every program.</li>
+                <li>Use meaningful input and output labels.</li>
+                <li>Match the sample output format and alignment.</li>
+                <li>Use meaningful variable names.</li>
+                <li>Remove unused variables.</li>
+                <li>Use indentation and short comments for important logic.</li>
+              </ul>
+
+              <h2>Before You Submit</h2>
+              <pre><code>1. File names match the assignment exactly.
+2. Every program has an author header.
+3. Every program compiles.
+4. Every program runs.
+5. Output labels match the sample.
+6. Screenshots show every program working.
+7. Results document is Word or PDF.
+8. Java files are submitted individually.
+9. No zip file.
+10. Submission is before 11:59 PM on the D2L due date.</code></pre>
+
+              <h2>Quiz Setup</h2>
+              <p>The try-quiz video says quizzes and exams may use LockDown Browser and webcam. The practice quiz exists to verify your computer can complete that flow before real quizzes and exams.</p>
+
+              <div class="key-points">
+                <h4>Key Points</h4>
+                <ul>
+                  <li>Most preventable CS3305 point losses come from submission details, not just logic mistakes.</li>
+                  <li>Compile, run, screenshot, and submit individual Java files.</li>
+                  <li>Do not copy code. Document outside help and resources.</li>
+                  <li>No late submission means submit early enough to fix upload problems.</li>
+                </ul>
+              </div>`
+          },
+          {
+            id: 'cs3305-w1-l11',
+            title: 'Video Notes: HW1 Recursion Roadmap',
+            content: `
+              <h2>The Plain-English Idea</h2>
+              <p>The HW1 video describes three recursive Java programs. This lesson is a roadmap for understanding the assignment. It will not give you finished submission code, because the learning goal is for you to design and write the methods yourself.</p>
+
+              <div class="note"><strong>Core HW1 rule:</strong> use recursion for the required methods. A loop is allowed in <code>main</code> for letting the user try again, but the recursive work itself should not be done with loops.</div>
+
+              <h2>Part 1: Print a String in Reverse</h2>
+              <ul>
+                <li>Class name pattern: <code>PrintReverseYourName</code>.</li>
+                <li><code>main</code> asks the user for a string.</li>
+                <li><code>main</code> passes the string to a recursive method named like <code>printCharReverse</code>.</li>
+                <li>The recursive method prints one character per call.</li>
+                <li>The program asks whether the user wants to try another string.</li>
+              </ul>
+
+              <h2>How to Think About Part 1</h2>
+              <p>For a string, the smaller problem is the same string with one character removed from consideration. Ask yourself: should the method print the last character first, or should it call itself first and print after the smaller call returns?</p>
+
+              <h2>Part 2: Recursive Class Average</h2>
+              <ul>
+                <li>Class name pattern: <code>AverageGradeYourName</code>.</li>
+                <li>The user enters the number of students.</li>
+                <li>The program stores grades from <code>0</code> to <code>100</code> in an <code>int[]</code> array.</li>
+                <li><code>main</code> passes the filled array to a recursive method named like <code>findAverage</code>.</li>
+                <li>The average should be returned as a <code>double</code>.</li>
+                <li>Output should show at most two digits after the decimal point.</li>
+              </ul>
+
+              <h2>How to Think About Part 2</h2>
+              <p>An average is based on a sum divided by a count. Recursive thinking usually means: find the value for one grade, then combine it with the answer for the remaining grades. A helper method may be useful if you need to track an index or count.</p>
+
+              <h2>Part 3: Recursive Star Pattern</h2>
+              <ul>
+                <li>Class name pattern: <code>StarPatternYourName</code>.</li>
+                <li>The user enters a positive number of rows.</li>
+                <li>The method <code>printStars</code> recursively prints a pyramid.</li>
+                <li>The base case is <code>0</code> rows.</li>
+                <li>The second line should contain <code>3</code> stars, then <code>5</code>, then <code>7</code>, and so on.</li>
+                <li>There should be no spaces between stars.</li>
+                <li>Do not use <code>String.repeat</code>.</li>
+              </ul>
+
+              <h2>How to Think About Part 3</h2>
+              <p>The professor hinted that there are really three recursive subproblems: printing spaces on the left, printing stars on the current row, and moving through the rows.</p>
+
+              <pre><code>For each row, think:
+1. How many leading spaces does this row need?
+2. How many stars does this row need?
+3. What is the smaller row problem after this one?</code></pre>
+
+              <h2>HW1 Study Plan</h2>
+              <ol>
+                <li>Write the method headers first.</li>
+                <li>Write the base case in plain English.</li>
+                <li>Trace one tiny input by hand.</li>
+                <li>Only then write the recursive case.</li>
+                <li>Test the smallest cases before bigger cases.</li>
+                <li>Take screenshots after every program works.</li>
+              </ol>
+
+              <div class="key-points">
+                <h4>Key Points</h4>
+                <ul>
+                  <li>HW1 has three programs: reverse string, average grades, and star pattern.</li>
+                  <li>Each program must allow reruns with different user inputs.</li>
+                  <li>The recursive methods should handle the required recursive work without loops.</li>
+                  <li>Start by designing base cases and shrinking rules before coding.</li>
+                </ul>
+              </div>`
+          },
+          {
+            id: 'cs3305-w1-l12',
+            title: 'Video Notes: Arrays, ADTs, and Java Collections',
+            content: `
+              <h2>The Plain-English Idea</h2>
+              <p>The Java introduction video is a bridge from basic Java into data structures. The key idea is that a data structure is not just a place to store values. It is also a set of operations for working with those values.</p>
+
+              <h2>ADT vs Concrete Data Structure</h2>
+              <p>An <strong>abstract data type</strong>, or ADT, describes what something should do. A concrete data structure describes how it is actually built in code.</p>
+
+              <table>
+                <thead>
+                  <tr><th>Idea</th><th>Question It Answers</th><th>Example</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>ADT</td><td>What operations should exist?</td><td>A list can add, remove, get, and report size.</td></tr>
+                  <tr><td>Concrete structure</td><td>How are those operations implemented?</td><td>An <code>ArrayList</code> or <code>LinkedList</code>.</td></tr>
+                </tbody>
+              </table>
+
+              <div class="note"><strong>Beginner translation:</strong> ADT is the promise. Concrete data structure is the machinery.</div>
+
+              <h2>What a Data Structure Contains</h2>
+              <p>In Java, a data structure is usually a class. That means it has two sides:</p>
+              <ul>
+                <li><strong>Data fields:</strong> the stored information.</li>
+                <li><strong>Methods:</strong> the actions you can perform on that information.</li>
+              </ul>
+
+              <h2>Arrays</h2>
+              <p>An array stores values of the same type in a fixed-size, sequential block. Array indexes start at <code>0</code>.</p>
+
+              ${cb(`int[] numbers = new int[4];
+numbers[0] = 10;
+numbers[1] = 20;
+
+System.out.println(numbers.length);
+System.out.println(numbers[1]);`, 'java', 'Java')}
+
+              <h2>Why Arrays Are Fast</h2>
+              <p>Java can jump directly to an array index because all elements are the same type and stored in order. That makes random access fast.</p>
+
+              <div class="tip"><strong>Fast operation:</strong> getting <code>numbers[3]</code> does not require checking indexes <code>0</code>, <code>1</code>, and <code>2</code> first.</div>
+
+              <h2>Why Arrays Are Limited</h2>
+              <ul>
+                <li>The size is fixed after creation.</li>
+                <li>You must track how many meaningful values are currently stored.</li>
+                <li>Insertion and deletion in the middle can require shifting values.</li>
+              </ul>
+
+              <h2>Linear vs Nonlinear Structures</h2>
+              <p>A <strong>linear</strong> data structure has a natural sequence. Arrays, lists, stacks, and queues are linear. A <strong>nonlinear</strong> structure can branch. Trees and graphs are nonlinear.</p>
+
+              <table>
+                <thead>
+                  <tr><th>Structure</th><th>Shape</th><th>Common Examples</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Linear</td><td>One item after another</td><td>Array, list, stack, queue</td></tr>
+                  <tr><td>Nonlinear</td><td>Branches or many connections</td><td>Tree, graph</td></tr>
+                </tbody>
+              </table>
+
+              <h2>Java Collections Big Picture</h2>
+              <p>The Java Collections Framework gives you ready-made interfaces and classes for common structures.</p>
+              <ul>
+                <li><code>Collection</code> stores individual elements.</li>
+                <li><code>List</code>, <code>Queue</code>, and <code>Set</code> are collection-style interfaces.</li>
+                <li><code>Map</code> stores key-value pairs.</li>
+                <li><code>ArrayList</code> and <code>LinkedList</code> are concrete classes.</li>
+              </ul>
+
+              <h2>Iterator</h2>
+              <p>An iterator lets you walk through a collection without needing to know how the collection is stored internally.</p>
+
+              ${cb(`Iterator<String> it = names.iterator();
+
+while (it.hasNext()) {
+    String name = it.next();
+    System.out.println(name);
+}`, 'java', 'Java')}
+
+              <h2>ArrayList as an Expandable Array</h2>
+              <p>An <code>ArrayList</code> behaves like a resizable array. Internally, when it runs out of space, Java can allocate a larger block, copy the old values, add the new value, and release the old block.</p>
+
+              <div class="warn"><strong>Trade-off:</strong> <code>ArrayList</code> makes growth easier than a raw array, but resizing still costs time when copying happens.</div>
+
+              <div class="key-points">
+                <h4>Key Points</h4>
+                <ul>
+                  <li>An ADT defines behavior. A concrete data structure implements it.</li>
+                  <li>Arrays are fast for random access but fixed in size.</li>
+                  <li>Linear structures have a natural sequence. Nonlinear structures branch.</li>
+                  <li>Java Collections separate interfaces like <code>List</code> from implementations like <code>ArrayList</code>.</li>
+                  <li>Iterators give a standard way to walk through collections.</li>
+                </ul>
+              </div>`
+          },
+          {
+            id: 'cs3305-w1-l13',
+            title: 'Video Notes: Java Generics for Data Structures',
+            content: `
+              <h2>The Plain-English Idea</h2>
+              <p>Generics let you tell Java what type a data structure should hold. That matters in CS3305 because Java collections and custom data structures often look like <code>ArrayList&lt;String&gt;</code>, <code>Stack&lt;Integer&gt;</code>, or <code>GenericStack&lt;E&gt;</code>.</p>
+
+              <h2>Why Generics Exist</h2>
+              <p>Before generics, Java collections could hold plain <code>Object</code> values. That meant a list could accidentally mix strings, numbers, dates, or other objects. The code might compile, then fail later when the program actually runs.</p>
+
+              ${cb(`ArrayList list = new ArrayList();
+list.add("Java Program");
+list.add(100);     // Compiles, but this is unsafe.
+`, 'java', 'Old Java Style')}
+
+              <p>With generics, you declare the intended type up front. Java can then catch wrong-type values at compile time.</p>
+
+              ${cb(`ArrayList<String> list = new ArrayList<String>();
+list.add("Java Program");
+list.add(100);     // Compile-time error.
+`, 'java', 'Generic Java Style')}
+
+              <div class="tip"><strong>Beginner translation:</strong> generics are labels that say, "This container is only for this kind of thing."</div>
+
+              <h2>Generic Type Parameters</h2>
+              <p>When you see angle brackets, you are usually looking at a generic type.</p>
+
+              <ul>
+                <li><code>ArrayList&lt;String&gt;</code> means an ArrayList of strings.</li>
+                <li><code>ArrayList&lt;Double&gt;</code> means an ArrayList of Double objects.</li>
+                <li><code>GenericStack&lt;E&gt;</code> means a stack class that can work with some type named <code>E</code>.</li>
+              </ul>
+
+              <div class="warn"><strong>Watch out:</strong> generic types use class types, not primitive types. Use <code>Integer</code> instead of <code>int</code>, and <code>Double</code> instead of <code>double</code>.</div>
+
+              <h2>Stack Example</h2>
+              <p>A stack is last-in, first-out. Common stack operations are <code>push</code>, <code>pop</code>, and <code>peek</code>.</p>
+
+              ${cb(`public class GenericStack<E> {
+    private ArrayList<E> list = new ArrayList<E>();
+
+    public int getSize() {
+        return list.size();
+    }
+
+    public E peek() {
+        return list.get(getSize() - 1);
+    }
+
+    public void push(E item) {
+        list.add(item);
+    }
+
+    public E pop() {
+        E item = list.get(getSize() - 1);
+        list.remove(getSize() - 1);
+        return item;
+    }
+}`, 'java', 'Generic Stack Skeleton')}
+
+              <p>The same class can become a stack of strings, integers, or other object types depending on how you instantiate it.</p>
+
+              ${cb(`GenericStack<String> words = new GenericStack<String>();
+words.push("recursion");
+
+GenericStack<Integer> numbers = new GenericStack<Integer>();
+numbers.push(42);`, 'java', 'Using GenericStack')}
+
+              <h2>Generic Methods</h2>
+              <p>Methods can be generic too. A generic method can work with different object types while still giving Java type information.</p>
+
+              ${cb(`public static <E> void print(E[] list) {
+    for (E item : list) {
+        System.out.print(item + " ");
+    }
+}`, 'java', 'Generic Method')}
+
+              <h2>Raw Types</h2>
+              <p>A raw type is a generic class used without the angle-bracket type. The professor called this unsafe because it exists mainly for backward compatibility with older Java code.</p>
+
+              ${cb(`ArrayList rawList = new ArrayList();          // Raw type
+ArrayList<String> safeList = new ArrayList<>(); // Preferred`, 'java', 'Raw vs Generic')}
+
+              <h2>Bounded Types and Wildcards</h2>
+              <p>Sometimes a generic type must be limited. For example, a matrix class may only make sense for number-like types.</p>
+
+              ${cb(`public abstract class GenericMatrix<E extends Number> {
+    // E must be Number or a subclass of Number.
+}`, 'java', 'Bounded Generic Type')}
+
+              <p>Wildcards use <code>?</code>. You will see forms like <code>? extends T</code> and <code>? super T</code>. For now, remember that wildcards are used when a method should accept a family of related generic types.</p>
+
+              <h2>Type Erasure</h2>
+              <p>Java checks generic types at compile time, then erases that generic information for runtime. That is why generics are mainly a compile-time safety feature.</p>
+
+              <div class="key-points">
+                <h4>Key Points</h4>
+                <ul>
+                  <li>Generics help Java catch wrong-type mistakes before runtime.</li>
+                  <li>Use wrapper classes like <code>Integer</code> and <code>Double</code> with generics.</li>
+                  <li>Generic classes let one data structure work with many object types safely.</li>
+                  <li>Raw types are old-style and unsafe. Prefer parameterized types.</li>
+                  <li>Bounded types limit which classes can be used as a generic type.</li>
+                </ul>
+              </div>`
           }
         ]
       }
